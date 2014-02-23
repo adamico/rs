@@ -68,3 +68,4 @@ end
 
 gem "slim"
 gem "foundation-rails"
+gem "devise"
