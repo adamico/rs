@@ -1,0 +1,4 @@
+$ = jquery
+
+$ ->
+  $(document).foundation()
