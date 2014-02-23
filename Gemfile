@@ -1,4 +1,5 @@
 source 'https://rubygems.org'
+ruby "2.1.0"
 
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
@@ -45,6 +46,25 @@ gem 'spring',        group: :development
 
 # Use debugger
 # gem 'debugger', group: [:development, :test]
+
+group :test, :development do
+  gem "rspec-rails"
+end
+
+group :test do
+  gem "factory_girl_rails"
+  gem "capybara"
+  gem "database_cleaner", github: "bmabey/database_cleaner"
+  gem "guard-rspec", "~> 2.1.0"
+end
+
+group :development do
+  gem "pry-rails"
+  gem "quiet_assets", ">= 1.0.1"
+  gem 'better_errors'
+  gem 'byebug'
+  gem 'binding_of_caller'
+end
 
 gem "slim"
 gem "foundation-rails"
