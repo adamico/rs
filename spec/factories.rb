@@ -4,4 +4,8 @@ FactoryGirl.define do
     password "password"
     password_confirmation { |user| user.password}
   end
+
+  factory :article do
+    sequence(:titre) { |n| "titre#{n}"}
+  end
 end
